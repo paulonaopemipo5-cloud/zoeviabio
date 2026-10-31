@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Zoevia Bio – Physiology and computational biology</title>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eef3f0;--surface:#fff;--ink:#10292c;--muted:#4b6366;--leaf:#2a7a69;--signal:#e9a826;--line:#cfdcd7;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1d20;--surface:#14292d;--ink:#e8f1ee;--muted:#9fb7b3;--leaf:#5cc2ab;--signal:#f2b94a;--line:#25403f}}
+:root[data-theme="dark"]{--bg:#0d1d20;--surface:#14292d;--ink:#e8f1ee;--muted:#9fb7b3;--leaf:#5cc2ab;--signal:#f2b94a;--line:#25403f}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.05rem/1.65 "Instrument Sans",system-ui,sans-serif}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--signal);outline-offset:3px}
+.wrap{max-width:60rem;margin:0 auto;padding:0 1.25rem}
+nav{display:flex;justify-content:space-between;align-items:center;padding:1.1rem 0;font-weight:500}
+nav ul{display:flex;gap:1.25rem;list-style:none;margin:0;padding:0}
+nav a{text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+.brand{font-family:"Newsreader",Georgia,serif;font-size:1.25rem;font-weight:600}
+.hero{padding:3.5rem 0 3rem}
+h1{font:600 clamp(2.6rem,9vw,5rem)/1.02 "Newsreader",Georgia,serif;margin:0 0 1.2rem;letter-spacing:-.02em}
+.lede{font:400 clamp(1.2rem,3.4vw,1.6rem)/1.45 "Newsreader",Georgia,serif;color:var(--muted);max-width:34rem;margin:0 0 1.8rem}
+.btns{display:flex;flex-wrap:wrap;gap:.75rem}
+.btn{display:inline-block;padding:.8rem 1.35rem;border-radius:.5rem;font-weight:600;text-decoration:none;border:2px solid var(--ink)}
+.btn.main{background:var(--ink);color:var(--bg)}
+.btn:hover{background:var(--signal);border-color:var(--signal);color:#10292c}
+.seq{display:flex;gap:3px;height:2.6rem;align-items:flex-end;margin-top:3rem;overflow:hidden}
+.seq i{flex:1;min-width:3px;border-radius:2px 2px 0 0;background:var(--leaf)}
+.seq i:nth-child(4n){background:var(--signal)}
+.seq i:nth-child(7n){background:var(--ink)}
+section{padding:3rem 0;border-top:1px solid var(--line)}
+h2{font:600 clamp(1.7rem,5vw,2.4rem)/1.15 "Newsreader",Georgia,serif;margin:0 0 1.5rem}
+.about{display:grid;gap:1.5rem}
+.about p{margin:0;max-width:38rem}
+.facts{display:grid;gap:.75rem;margin:0;padding:0;list-style:none}
+.facts li{padding:.9rem 1rem;background:var(--surface);border-left:4px solid var(--leaf);border-radius:.25rem}
+.facts b{display:block}
+.grid{display:grid;gap:1rem}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:.75rem;padding:1.4rem}
+.card h3{font:600 1.35rem/1.25 "Newsreader",Georgia,serif;margin:0 0 .5rem}
+.card p{margin:0;color:var(--muted)}
+.card.lead{border-color:var(--leaf);border-width:2px}
+.contact p{max-width:34rem;margin:0 0 1.5rem}
+footer{padding:2rem 0 3rem;color:var(--muted);font-size:.95rem;border-top:1px solid var(--line)}
+@media(min-width:720px){.about{grid-template-columns:1.4fr 1fr}.grid{grid-template-columns:repeat(2,1fr)}.card.lead{grid-column:1/-1}}
+@media(prefers-reduced-motion:no-preference){.seq i{transform-origin:bottom;animation:grow .9s ease-out both}@keyframes grow{from{transform:scaleY(0)}}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav aria-label="Main">
+<span class="brand">Zoevia Bio</span>
+<ul><li><a href="#about">About</a></li><li><a href="#focus">Focus</a></li><li><a href="#contact">Contact</a></li></ul>
+</nav>
+
+<header class="hero">
+<h1>Understanding the body, one dataset at a time.</h1>
+<p class="lede">I'm a Medical Physiology undergraduate at LAUTECH, building toward a career in reproductive physiology with computational tools.</p>
+<div class="btns">
+<a class="btn main" href="#contact">Get in touch</a>
+<a class="btn" href="#focus">See my focus areas</a>
+</div>
+<div class="seq" aria-hidden="true" id="seq"></div>
+</header>
+
+<section id="about">
+<h2>About Oke Paul</h2>
+<div class="about">
+<p>I study Medical Physiology at Ladoke Akintola University of Technology in Ibadan, Nigeria. My path points toward reproductive physiology, with a particular interest in male reproductive health. I pair that with bioinformatics and computational biology, so I can ask biological questions and test them with data.</p>
+<ul class="facts">
+<li><b>Studying</b>Medical Physiology (undergraduate)</li>
+<li><b>University</b>Ladoke Akintola University of Technology</li>
+<li><b>Based in</b>Ibadan, Oyo State, Nigeria</li>
+<li><b>Aiming for</b>Reproductive physiology</li>
+</ul>
+</div>
+</section>
+
+<section id="focus">
+<h2>Focus areas</h2>
+<div class="grid">
+<article class="card lead"><h3>Male reproductive health</h3><p>My central interest: how the male reproductive system works, what affects it, and how to explain it clearly to people who need the information.</p></article>
+<article class="card"><h3>Medical physiology</h3><p>A grounding in how organ systems function and interact, from the cell up to the whole body.</p></article>
+<article class="card"><h3>Bioinformatics</h3><p>Using computational methods to read and make sense of biological data.</p></article>
+<article class="card"><h3>Computational biology</h3><p>Modelling and analysing biological questions with code and data.</p></article>
+<article class="card"><h3>Reproductive physiology</h3><p>The field I'm training toward, with the goal of contributing to research and care.</p></article>
+</div>
+</section>
+
+<section id="contact" class="contact">
+<h2>Let's connect</h2>
+<p>I'm open to collaborations, study groups, research conversations, and opportunities in physiology and computational biology. Find me on LinkedIn to start a conversation.</p>
+<a class="btn main" href="https://www.linkedin.com/in/oke-paul-3078a5404" target="_blank" rel="noopener">Message me on LinkedIn</a>
+</section>
+
+<footer>© <span id="yr">2026</span> Zoevia Bio · Founded by Oke Paul · Ibadan, Nigeria</footer>
+</div>
+<script>
+(function(){
+var s=document.getElementById('seq'),h=[.5,.8,.35,1,.6,.9,.45,.7,.3,.95,.55,.75,.4,.85,.6,1,.35,.7,.5,.9,.3,.8,.6,.45,.95,.55,.7,.4,.85,.5,.75,.35,1,.6,.8,.45,.9,.3,.7,.55];
+var n=Math.min(h.length,Math.max(16,Math.floor(window.innerWidth/18)));
+for(var i=0;i<n;i++){var b=document.createElement('i');b.style.height=(h[i]*100)+'%';b.style.animationDelay=(i*25)+'ms';s.appendChild(b);}
+})();
+</script>
+</body>
+</html>
